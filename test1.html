@@ -42,13 +42,12 @@ body {
   width: 100%;
   height: 100vh;
   color: #fff;
-  display: block;
+          display: block;
 }
 
 .slick-track,
 .slick-list {
   height: 100vh;
-  width: -220px !important;
 }
 
 .slick-dotted.slick-slider {
@@ -72,22 +71,6 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 40px;
-}
-
-
-.slide:hover{
-    width: 50vw !important;
-}
-
-
-
-
-.slides .slide span {
-    display: none;
-}
-
-.mobile_slide span {
-    display: none;
 }
 
 .slides1 {
@@ -221,11 +204,6 @@ body {
 }
 }
 
-.mobile_slide {
-  width: 100%;
-  height: 33vh !important;
-}
-
 @media screen and (max-width: 600px) {
   .slides-container {
     display: none;
@@ -236,22 +214,12 @@ body {
   .container_mobile {
 	  margin-left: auto;
 	  margin-right: auto;
-	  margin-top:70px;
 	  width: 100vw;
 	  height: 100%;
 	  color: #fff;
 	  display: block;
 }
 
-.slick-track, .slick-list
-{
-height: 33vh !important;
-}
-.header-bar{
-position: absolute !important;
-    top: 0 !important;
-	z-index: 1000 !important;
-}
 .mobile_slide {
   color: #fff;
   background-position: center;
@@ -342,7 +310,6 @@ body {
 <header class="header-bar d-flex d-lg-block align-items-center">
     <div class="site-logo">
       <a href="index.html">Gourab's Photography</a>
-	  <h3 style="font-family: Georgia, serif; font-size: small; color: white;  margin-top: 10px;">A Trip Down Memory Lane</h3>
     </div>
     
     <div class="d-inline-block d-xl-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" onclick="toggle_visibility('side-menu');"><i class="fa fa-bars" style="color: #fff"></i></a></div>
@@ -419,18 +386,9 @@ body {
 
 <div class='container_mobile'>
 <!--   <div class="intro">hello</div> -->
-<div class='mobile_slides'>
     <div class="pic1 mobile_slide">
       <span>1</span>
     </div>
-    <div class="mobile_slide pic24">
-      <span>4</span>
-    </div>
-    <div class="mobile_slide pic25">
-      <span>5</span>
-    </div>
-</div>
-<div class='mobile_slides'>
     <div class="pic2 mobile_slide">
       <span>2</span>
     </div>
@@ -440,29 +398,12 @@ body {
     <div class="pic4 mobile_slide">
       <span>4</span>
     </div>
-</div>
-<div class='mobile_slides'>
     <div class="pic5 mobile_slide">
       <span>5</span>
     </div>
     <div class="pic6 mobile_slide">
       <span>6</span>
     </div>
-    <div class="mobile_slide pic26">
-      <span>6</span>
-    </div>
-</div>
-<div class='mobile_slides'>
-    <div class="mobile_slide pic13">
-      <span>3</span>
-    </div>
-    <div class="mobile_slide pic14">
-      <span>4</span>
-    </div>
-    <div class="mobile_slide pic15">
-      <span>5</span>
-    </div>
-</div>
   </div>
 </div>
 
@@ -524,21 +465,53 @@ var slick_handle_wheel_event_debounced = debounce(slick_handle_wheel_event,100, 
 // init slider 
 const slick_2 = $(".slides");
 slick_2.slick({
-	slidesToShow: 4,
+
+  slidesToShow: 4,
+  slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
+
+  //dots: true,
+  //horizontal: true,
+  // verticalSwiping: true,
+  //autoplay: true,
+  //autoplaySpeed: 2000,
   pauseOnHover:true,
-  arrows: false,
-  focusOnSelect:true,
-  });
+  arrows: false });
   
-const slick_21 = $(".mobile_slides");
-  slick_21.slick({
-	slidesToShow: 1,
+  const slick_1 = $(".slides1");
+slick_1.slick({
+
+  slidesToShow: 4,
+  slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  });
+  autoplaySpeed: 2200,
+
+  //dots: true,
+  //horizontal: true,
+  // verticalSwiping: true,
+  //autoplay: true,
+  //autoplaySpeed: 2000,
+  pauseOnHover:true,
+  arrows: false });
+  
+  
+  const slick_3 = $(".slides2");
+slick_3.slick({
+
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+
+  //dots: true,
+  //horizontal: true,
+  // verticalSwiping: true,
+  //autoplay: true,
+  //autoplaySpeed: 2000,
+  pauseOnHover:true,
+  arrows: false });
+  
 
 var slick_2_is_animating = false;
 
